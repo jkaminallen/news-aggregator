@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Saved Articles</title>
+  </head>
+
+  <body>
+    <h1>Saved Articles :</h1>
+
+    <ul>
+      <% @articles.each do |title, description, url| %>
+        <li><%= title %>, <%= description %>, <a href="/articles/<%= url %>" target="_blank"><%= url %></a></li>
+      <% end %>
+    </ul>
+  </body>
+</html>
